@@ -48,12 +48,14 @@
                   <th>Seller</th>
                   <th>Buyer</th>
               </tr>
+             <% for(i = 0; i < reports.length; i++){ %>
               <tr>
-                  <td>14213</td>
-                  <td>Calculus III (Undergraduate Texts in Mathematics)</td>
-                  <td>Daniel</td>
-                  <td>Daniel</td>
+                <div name="reportID" data-value="<% reports[i]._id %>"></div>
+                <td><a href="/textbook"> <%= reports[i].title %></a></td>
+                <td><%= reports[i].seller %></td>
+                <td><%= reports[i].buyer %></td>
               </tr>
+              <% } %>
           </table>
 </body>
 </html>
