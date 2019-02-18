@@ -15,6 +15,9 @@ router.get('/register', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/../pages/register.html'));
 });
 
+router.get('/report', function (req, res, next) {
+  return res.sendFile(path.join(__dirname + '/../pages/ReportPage.html'));
+});
 
 //POST route for updating data
 router.post('/', function (req, res, next) {
